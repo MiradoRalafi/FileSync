@@ -21,7 +21,14 @@ namespace FileSync
 
         private void btn_sync_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                FileManager.SyncFiles();
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_stop_Click(object sender, EventArgs e)

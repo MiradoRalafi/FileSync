@@ -23,6 +23,7 @@ namespace FileSync
         {
             try
             {
+                FileManager.Initialize();
                 FileManager.StartWatcher();
                 this.form.Controls.Find("manager1", true)[0].BringToFront();
             }
